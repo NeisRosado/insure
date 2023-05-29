@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 1440px;
+}
+
 .header {
   margin-left: 90px;
   margin-right: 90px;
@@ -14,15 +18,19 @@
 
 .nav__list {
   display: flex;
-  justify-content: center;
   align-items: center;
   align-content: center;
   gap: 25px;
-  font-family: "DM Serif Display", serif;
+  font-family: "karla";
   font-size: 16px;
-  color: hsl(216, 30%, 68%);
-  font-weight: 400;
+  color: grey;
+  font-weight: bold;
   list-style: none;
+  float: right;
+}
+
+.nav__mobile {
+  display: none;
 }
 
 #view {
@@ -36,35 +44,42 @@
 .nav__image {
   margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  float: left;
 }
 
-#lineas__derecha {
-  display: flex;
-  justify-content: right;
-  height: 400px;
-}
-
-.main__section__inicio {
-  display: flex;
+.main_section_inicio {
   height: 550px;
   background-color: hsl(256, 26%, 20%);
   color: white;
-  padding: 90px;
   position: relative;
 }
 
-.main__article__inicio {
+#lineas__derecha {
+  float: right;
+  height: 500px;
+  z-index: 2;
+  position: absolute;
+  left: 1003px;
+  top: 0px;
+}
+
+
+.main_article_inicio {
   font-family: "Karla", sans-serif;
   font-size: 16px;
 }
 
-#texto__inicio {
-  margin-left: 40px;
+#lineas__izquierda {
+  position: absolute;
+  top: 380px;
 }
 
-#list__view__plans {
-  margin-left: 40px;
+#texto__inicio {
+  margin-left: 150px;
+}
+
+#list_view_plans {
+  margin-left: 150px;
   list-style: none;
   border: 1px solid white;
   padding: 10px;
@@ -73,44 +88,63 @@
 }
 
 h1 {
-  margin-left: 40px;
+  margin-top: 100px;
+  margin-left: 150px;
   font-family: serif;
   font-size: 60px;
 }
 
-hr {
-  margin-left: 40px;
+#hr__inicio {
+  margin-left: 150px;
   width: 130px;
-  border: solid 1px gray;
+  border: solid 1px white;
+  position: relative;
+  top: 90px;
+
+}
+
+.main__imagedos {
+  display: none;
 }
 
 .main__image {
   display: flex;
-  justify-content: right;
-  width: 600px;
+  width: 500px;
   position: absolute;
-  right: 50px;
-}
-
-.figure__lineas {
-  display: flex;
-  justify-content: left;
-  position: absolute;
-
+  right: 170px;
+  top: 80px;
+  z-index: 1;
 }
 
 h2 {
   font-family: serif;
-  font-size: 50px;
+  font-size: 60px;
   color: hsl(270, 9%, 17%);
 }
 
-.main__section__centro {
+.we__are {
+  margin-left: 90px;
+}
+
+#hr__we {
+  border: none;
+  border-top: solid 1px hsl(216, 30%, 68%);
+  left: 0px;
+  position: relative;
+  width: 130px;
+}
+
+.main_section_centro {
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-left: 90px;
   margin-right: 90px;
+}
+
+.main_section_centro p {
+  line-height: 25.0px;
+  color: hsl(215, 11%, 59%);
 }
 
 h4 {
@@ -150,8 +184,9 @@ h4 {
 
 h3 {
   font-family: serif;
-  font-size: 50px;
-  margin: 20px;
+  font-size: 40px;
+  margin: 60px 0px 50px 50px;
+
 }
 
 #how_we_work {
@@ -159,48 +194,49 @@ h3 {
   border: 1px solid white;
   padding: 5px;
   height: 30px;
-  margin: 15px;
+  width: 150px;
   color: white;
   font-size: 12px;
   font-family: serif;
   text-align: center;
   position: relative;
   top: 100px;
-  left: 380px;
+  left: 650px;
 }
 
-.image__final {
-  display: flex;
-  justify-content: right;
+.img__final {
+  float: right;
   size: 80px;
-  margin-left: 80px;
+  margin-left: 280px;
 }
 
 .footer__nav {
-  display: flex;
   margin-left: 90px;
   margin-right: 90px;
+  margin-top: 40px;
 }
 
 .footer__image {
   display: flex;
   justify-content: left;
+  top: 20px;
+  position: relative;
 
 }
 
 .footer__list {
   display: flex;
-  justify-content: right;
-  align-items: center;
   gap: 25px;
   list-style: none;
+  float: right;
 }
 
 #hr__footer {
   margin-left: 90px;
   margin-right: 90px;
-  width: 1325px;
-  border: solid 1px gray;
+  width: 1265px;
+  border: none;
+  border-top: 1px solid hsl(216, 5%, 82%);
 }
 
 .footer__div div {
@@ -210,16 +246,311 @@ h3 {
 
 .tittle {
   font-family: "Karla", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: hsl(216, 30%, 68%);
   font-weight: bold;
 
 }
 
-.footer__div__list {
+.footer_div_list {
   list-style: none;
   font-family: "Karla", sans-serif;
-  color: hsl(270, 9%, 17%);
-  font-size: 12px;
+  color: hsl(0, 0%, 0%);
+  font-size: 14px;
   font-weight: bold;
+  line-height: 25px;
+  float: left;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.footer__div{
+  gap: 50px;
+  display: flex;
+   justify-content: center;
+}
+
+.footer{
+  width: 1440px;
+  background-color: rgb(248, 246, 246);
+  z-index: 2;
+  position: absolute;
+
+}
+
+#lineas__footer{
+  display: flex;
+  margin-top: 10px;
+  width: 90px;
+  z-index: 1;position:absolute ;
+}
+
+#lineas__footerdos{
+  display: none;
+}
+
+#lineas__derechados{
+  display: none;
+}
+
+#lineas__findout{
+  display: none;  
+}
+
+#lineas__izquierdados{
+  display: none;
+}
+
+/* ----------------------------------------------------- */
+@media(max-width: 375px){
+  body{
+      width: 375px;
+      .nav__list{display: none;}
+  }
+
+  .header {
+      width: 570px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 35px;
+  }
+
+  .nav__mobile{
+      display: block ;
+      float: right;
+  }
+
+  .nav__image {
+      margin: 0%;
+  }
+
+  .main__image {
+    display: none;
+  }
+
+  .main__imagedos{
+      display: flex;
+      position: static;
+      width: 800px;
+      height: 709px;
+  }
+
+  .main_section_inicio {
+      width: 589px;
+      height: 550px;
+      background-color: hsl(256, 26%, 20%);
+      color: white;
+      top: -5px;
+      
+  }
+
+ 
+  .main_article_inicio {
+      font-family: "Karla", sans-serif;
+      font-size: 16px;
+     right: 72px;
+     top: -31px;
+     position: relative;
+     text-align: center;
+  }
+
+  #texto__inicio {
+      margin-left: 150px;
+  }
+
+  #list_view_plans {
+      margin-left: 300px;
+      list-style: none;
+      border: 1px solid white;
+      padding: 10px;
+      width: 150px;
+      text-align: center;
+      margin-top: 20px;
+  }
+  #hr__we {
+      border: none;
+      border-top: solid 1px hsl(216, 30%, 68%);
+      left: 140px;
+      position: relative;
+      width: 130px;
+  }
+  .we__are{
+      width: 375px;
+      margin-left: 100px;
+
+  }
+  .we__are h2{
+      font-family: serif;
+      font-size: 57px;
+      color: hsl(270, 9%, 17%);
+      
+      text-align: center;
+  }
+  .main_article_inicio h1 {
+      margin-top: 100px;
+      margin-left: 141px;
+      font-family: serif;
+      font-size: 60px;
+      
+  }
+  .main_section_centro {
+      display: inline-block;
+           
+   }
+
+
+  .snappy{
+      margin-left: 15px;
+      width: 375px;
+      text-align: center;
+  }
+  .people{
+      margin-left: 15px;
+      width: 375px;
+      text-align: center;
+  }
+  
+  .prices{
+      margin-left: 15px;
+      width: 375px;
+      text-align: center;
+  }
+
+  .main__final {
+      
+      justify-content: center;
+      background-color: hsl(256, 26%, 20%);
+      color: white;
+      margin-left: 70px;
+      margin-right: 0px;
+      text-align: center;
+      width: 450px;
+      height: 350px;
+  }
+  .main__final br {
+      display: none;
+  }
+
+  h3 {
+      font-family:serif;
+      font-size: 39px;
+      margin: 60px 40px 50px 110px;
+  
+  }
+  #how_we_work {
+      
+      list-style: none;
+      border: 1px solid white;
+      width: 250px;
+      height: 30px;
+      left: -180px;
+      color: white;
+      font-size: 10px;
+      top: 270px;
+  }
+  .footer{
+      
+      width: 587px;
+  }
+
+  .footer__image {
+     
+      justify-content: center;
+      top: 10px;
+
+  }
+  .footer__list {
+   
+      margin-right: 120px;
+      gap: 25px;
+      list-style: none;
+      margin-top: 40px;
+    margin-left: 50px;
+    display: flex;
+    position: relative;
+      
+  }
+ 
+  #lineas__derecha{
+      display: none;
+  }
+
+  #lineas__izquierda{
+      display: none;
+  }
+
+  .img__final{
+      display: none;
+  }
+
+  #lineas__footer{
+      display: none;
+  }
+
+  
+  #hr__footer{
+      width: 542px;
+      margin-left: 25px;
+      margin-top: 70px;
+  }
+  .footer__div  {
+      display: inline-block;
+      
+  }
+  .footer__div div{
+      text-align: center;
+      margin-left: 25px;
+      
+  }
+  .footer_div_list {
+      list-style: none;
+      font-family: "Karla", sans-serif;
+      color: hsl(0, 0%, 0%);
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 25px;
+      width: 500px;
+      margin-left: 20px;
+  }
+
+  #hr__inicio{
+      display: none;
+  }
+
+  #lineas__footerdos{
+      display: flex;
+      position:absolute;
+      width: 900px;
+      height: 270px;
+
+  }
+
+  #lineas__derechados{
+      display: flex;
+      position:absolute;
+      width: 900px;
+      height: 470px;
+      margin-left: 410px;
+      margin-top: -130px;
+  }
+
+  #lineas__findout{
+      display: flex;
+      position:absolute;
+      width: 900px;
+      height: 350px;
+      margin-left: 960px;
+      margin-top: 0px;
+  }
+
+  #lineas__izquierdados{
+      display: flex;
+      position:absolute;
+      width: 900px;
+      height: 220px;
+      margin-left: 0px;
+      margin-top: -470px;
+  }
+
+  
 }
